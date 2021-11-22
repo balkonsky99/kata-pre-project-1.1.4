@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Assume test is the database name -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mytestdb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+
+        <property name="hibernate.connection.characterEncoding">utf8</property>
+        <property name="hibbernate.current_session_context_class">thread</property>
+
+        <!-- List of XML mapping files -->
+        <mapping class="jm.task.core.jdbc.model.User"/>
+
+    </session-factory>
+</hibernate-configuration>
